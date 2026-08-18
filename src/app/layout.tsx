@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     description:
       "Análisis armónico, curvas de energía e integración nativa con Rekordbox y Serato.",
     type: "website",
+    url: "https://smart-set-landing.vercel.app",
+    images: [
+      {
+        url: "https://smart-set-landing.vercel.app/logo.png",
+        width: 1024,
+        height: 1024,
+        alt: "Smart Set Architect",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Smart Set Architect — Inteligencia para DJs",
+    description:
+      "Análisis armónico, curvas de energía e integración nativa con Rekordbox y Serato.",
+    images: ["https://smart-set-landing.vercel.app/logo.png"],
   },
 };
 
