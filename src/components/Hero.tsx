@@ -103,8 +103,7 @@ export default function Hero() {
 
           <motion.div variants={item} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <GlowButton
-              href="/Smart-Set-Architect-Setup.exe"
-              download
+              href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/download/v1.0.0/Smart-Set-Architect-Setup.exe"
               onClick={fireDownloadConfetti}
               innerClassName="btn-shine gap-2.5 bg-white px-7 py-3.5 text-[15px] font-medium text-[#0b0f17] shadow-[0_0_40px_-10px_rgba(103,232,249,0.55)] hover:bg-white/90 hover:shadow-[0_0_56px_-8px_rgba(103,232,249,0.7)] [--shine:rgba(103,232,249,0.55)]"
             >

@@ -118,8 +118,7 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <GlowButton
-                  href="/Smart-Set-Architect-Setup.exe"
-                  download
+                  href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/download/v1.0.0/Smart-Set-Architect-Setup.exe"
                   onClick={fireDownloadConfetti}
                   className="rounded-xl [--glow-duration:3.5s]"
                   innerClassName="btn-shine gap-2.5 bg-[#0d1119] px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_0_50px_-12px_rgba(139,92,246,0.6)] hover:shadow-[0_0_64px_-10px_rgba(139,92,246,0.8)]"
