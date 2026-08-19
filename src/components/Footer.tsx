@@ -91,7 +91,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Smart Set Architect. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 font-mono text-[11px] text-white/35">
-              <span>v1.0.0</span>
+              <span>v1.1.0</span>
               <span className="size-1 rounded-full bg-white/20" />
               <span>Diseñado para DJs</span>
             </div>
