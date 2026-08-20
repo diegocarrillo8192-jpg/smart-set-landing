@@ -31,6 +31,11 @@ const checks = [
   "Actualizaciones automáticas",
 ];
 
+const WINDOWS_URL =
+  "https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe";
+const MACOS_URL =
+  "https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.dmg";
+
 const requirements = [
   { icon: Monitor, label: "Windows 10 / 11 · 64-bit" },
   { icon: Cpu, label: "CPU de 2 núcleos · 2 GHz" },
@@ -98,7 +103,7 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
               </motion.div>
 
               <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                Escritorio · Windows (.exe)
+                Escritorio · Windows y macOS
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-soft">
                 La versión nativa con análisis completo, gestión de biblioteca y
@@ -118,13 +123,22 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <GlowButton
-                  href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/download/v1.1.0/Smart-Set-Architect-Setup.exe"
+                  href={WINDOWS_URL}
                   onClick={fireDownloadConfetti}
                   className="rounded-xl [--glow-duration:3.5s]"
                   innerClassName="btn-shine gap-2.5 bg-[#0d1119] px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_0_50px_-12px_rgba(139,92,246,0.6)] hover:shadow-[0_0_64px_-10px_rgba(139,92,246,0.8)]"
                 >
                   <MonitorDown className="size-4.5 transition-transform duration-300 group-hover:translate-y-0.5" />
-                  Descargar ahora
+                  Descargar para Windows (.exe)
+                </GlowButton>
+                <GlowButton
+                  href={MACOS_URL}
+                  onClick={fireDownloadConfetti}
+                  className="rounded-xl [--glow-duration:3.5s]"
+                  innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/[0.04] px-7 py-3.5 text-[15px] font-semibold text-white backdrop-blur transition-all duration-300 hover:border-cyan-300/40 hover:bg-white/10"
+                >
+                  <Apple className="size-4.5 transition-transform duration-300 group-hover:translate-y-0.5" />
+                  Descargar para macOS (.dmg)
                 </GlowButton>
                 <a
                   href="#download"
@@ -136,16 +150,8 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
               </div>
 
               <p className="mt-4 font-mono text-[11px] text-white/40">
-                Instalador 185 MB · v1.1.0 estable · Sin anuncios
+                Instalador ~185 MB · v1.1.0 estable · Sin anuncios
               </p>
-
-              <div className="mt-6 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-soft">
-                <Apple className="size-4 text-white/60" />
-                Versión macOS próximamente
-                <span className="rounded-full border border-violet-300/30 bg-violet-400/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-neon-violet">
-                  Pronto
-                </span>
-              </div>
             </div>
 
             <div className="relative z-10 border-t border-white/10 p-8 sm:p-12 lg:border-l lg:border-t-0">

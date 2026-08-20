@@ -49,7 +49,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/download/v1.1.0/Smart-Set-Architect-Setup.exe"
+            href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe"
             className="btn-shine hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white backdrop-blur transition-all duration-200 hover:border-cyan-300/40 hover:bg-white/10 sm:inline-flex"
           >
             <Download className="size-4 text-neon" />
@@ -88,7 +88,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/download/v1.1.0/Smart-Set-Architect-Setup.exe"
+                href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe"
                 onClick={() => setOpen(false)}
                 className="btn-shine mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-[#0b0f17] [--shine:rgba(103,232,249,0.55)]"
               >
