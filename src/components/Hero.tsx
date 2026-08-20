@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Download, Globe, ShieldCheck, AudioWaveform } from "lucide-react";
+import { MonitorDown, Globe, ShieldCheck, AudioWaveform, Apple } from "lucide-react";
 import { EASE } from "@/lib/motion";
 import { fireDownloadConfetti } from "@/lib/confetti";
+import { WINDOWS_URL, MACOS_URL } from "@/lib/download";
 import Spotlight from "@/components/effects/Spotlight";
 import GlowButton from "@/components/effects/GlowButton";
 import BorderBeam from "@/components/effects/BorderBeam";
@@ -81,7 +82,7 @@ export default function Hero() {
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2.5 rounded-full border border-cyan-300/20 bg-cyan-400/[0.06] px-4 py-1.5 text-xs font-medium tracking-wide text-neon">
               <span className="animate-pulse-dot size-1.5 rounded-full bg-neon shadow-[0_0_10px_2px_rgba(34,211,238,0.6)]" />
-              Listo para Windows · v1.0
+              Listo para Windows y macOS · v1.1
             </span>
           </motion.div>
 
@@ -101,14 +102,22 @@ export default function Hero() {
             Rekordbox y Serato en segundos.
           </motion.p>
 
-          <motion.div variants={item} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+          <motion.div variants={item} className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
             <GlowButton
-              href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe"
+              href={WINDOWS_URL}
               onClick={fireDownloadConfetti}
               innerClassName="btn-shine gap-2.5 bg-white px-7 py-3.5 text-[15px] font-medium text-[#0b0f17] shadow-[0_0_40px_-10px_rgba(103,232,249,0.55)] hover:bg-white/90 hover:shadow-[0_0_56px_-8px_rgba(103,232,249,0.7)] [--shine:rgba(103,232,249,0.55)]"
             >
-              <Download className="size-4.5 transition-transform duration-300 group-hover:translate-y-0.5" />
+              <MonitorDown className="size-4.5 text-neon transition-transform duration-300 group-hover:translate-y-0.5" />
               Descargar para Windows (.exe)
+            </GlowButton>
+            <GlowButton
+              href={MACOS_URL}
+              onClick={fireDownloadConfetti}
+              innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/5 px-7 py-3.5 text-[15px] font-medium text-white/85 backdrop-blur transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
+            >
+              <Apple className="size-4.5 text-white/70 transition-transform duration-300 group-hover:translate-y-0.5" />
+              Descargar para macOS (.dmg)
             </GlowButton>
             <a
               href="https://smart-set-studio-e6cf.vercel.app"

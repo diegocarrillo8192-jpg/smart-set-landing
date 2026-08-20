@@ -8,6 +8,7 @@ import { fadeUp } from "@/lib/motion";
 import { cn } from "@/lib/cn";
 import BorderBeam from "@/components/effects/BorderBeam";
 import GlowButton from "@/components/effects/GlowButton";
+import { WINDOWS_URL } from "@/lib/download";
 
 type SecuritySectionProps = {
   id?: string;
@@ -94,7 +95,7 @@ export default function SecuritySection({ id }: SecuritySectionProps) {
 
               <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-center">
                 <GlowButton
-                  href="https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe"
+                  href={WINDOWS_URL}
                   className="rounded-xl [--glow-duration:3.5s]"
                   innerClassName="btn-shine gap-2.5 bg-[#0d1119] px-7 py-3.5 text-[13px] font-semibold uppercase tracking-wide text-white shadow-[0_0_50px_-12px_rgba(34,211,238,0.5)] hover:shadow-[0_0_64px_-10px_rgba(34,211,238,0.75)]"
                 >

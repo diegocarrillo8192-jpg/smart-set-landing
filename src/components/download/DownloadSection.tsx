@@ -20,6 +20,7 @@ import { cn } from "@/lib/cn";
 import BorderBeam from "@/components/effects/BorderBeam";
 import GlowButton from "@/components/effects/GlowButton";
 import { fireDownloadConfetti } from "@/lib/confetti";
+import { WINDOWS_URL, MACOS_URL } from "@/lib/download";
 
 type DownloadSectionProps = {
   id?: string;
@@ -31,22 +32,31 @@ const checks = [
   "Actualizaciones automáticas",
 ];
 
-const WINDOWS_URL =
-  "https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.exe";
-const MACOS_URL =
-  "https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest/download/Smart-Set-Architect-Setup.dmg";
+const requirements: Record<"windows" | "macos", { icon: typeof Monitor; label: string }[]> = {
+  windows: [
+    { icon: Monitor, label: "Windows 10 / 11 · 64-bit" },
+    { icon: Cpu, label: "CPU de 2 núcleos · 2 GHz" },
+    { icon: MemoryStick, label: "4 GB de RAM" },
+    { icon: HardDrive, label: "500 MB de espacio libre" },
+  ],
+  macos: [
+    { icon: Apple, label: "macOS 11 (Big Sur) o superior" },
+    { icon: Cpu, label: "Apple Silicon M1/M2/M3/M4 e Intel" },
+    { icon: MemoryStick, label: "4 GB de RAM" },
+    { icon: HardDrive, label: "500 MB de espacio libre" },
+  ],
+};
 
-const requirements = [
-  { icon: Monitor, label: "Windows 10 / 11 · 64-bit" },
-  { icon: Cpu, label: "CPU de 2 núcleos · 2 GHz" },
-  { icon: MemoryStick, label: "4 GB de RAM" },
-  { icon: HardDrive, label: "500 MB de espacio libre" },
+const platforms = [
+  { id: "windows" as const, label: "Windows", icon: MonitorDown },
+  { id: "macos" as const, label: "macOS", icon: Apple },
 ];
 
 export default function DownloadSection({ id }: DownloadSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [spotVisible, setSpotVisible] = useState(false);
+  const [platform, setPlatform] = useState<"windows" | "macos">("windows");
 
   const onMouseMove = (event: MouseEvent<HTMLDivElement>) => {
     const rect = ref.current?.getBoundingClientRect();
@@ -155,11 +165,40 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
             </div>
 
             <div className="relative z-10 border-t border-white/10 p-8 sm:p-12 lg:border-l lg:border-t-0">
-              <span className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
-                Requisitos del sistema
-              </span>
-              <ul className="mt-6 flex flex-col gap-5">
-                {requirements.map(({ icon: Icon, label }) => (
+              <div className="flex items-center justify-between gap-3">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
+                  Requisitos del sistema
+                </span>
+                <div className="inline-flex rounded-full border border-white/10 bg-white/[0.04] p-1">
+                  {platforms.map(({ id, label, icon: Icon }) => (
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => setPlatform(id)}
+                      className={cn(
+                        "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-all duration-200",
+                        platform === id
+                          ? "bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
+                          : "text-white/45 hover:text-white/75"
+                      )}
+                    >
+                      <Icon
+                        className={cn("size-3.5", platform === id ? "text-neon" : "text-white/40")}
+                        strokeWidth={1.8}
+                      />
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <motion.ul
+                key={platform}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="mt-6 flex flex-col gap-5"
+              >
+                {requirements[platform].map(({ icon: Icon, label }) => (
                   <li key={label} className="flex items-center gap-3.5 text-sm text-white/80">
                     <span className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-neon/80">
                       <Icon className="size-4" strokeWidth={1.8} />
@@ -167,7 +206,7 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
                     {label}
                   </li>
                 ))}
-              </ul>
+              </motion.ul>
               <div className="mt-8 flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-xs text-soft">
                 <ShieldCheck className="size-4 shrink-0 text-emerald-400" />
                 Sin registro · Sin telemetría · Funciona 100 % offline
