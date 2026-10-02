@@ -20,7 +20,7 @@ import { cn } from "@/lib/cn";
 import BorderBeam from "@/components/effects/BorderBeam";
 import GlowButton from "@/components/effects/GlowButton";
 import { fireDownloadConfetti } from "@/lib/confetti";
-import { WINDOWS_URL, MACOS_URL } from "@/lib/download";
+import { WINDOWS_URL, MACOS_URL, VERSION } from "@/lib/download";
 
 type DownloadSectionProps = {
   id?: string;
@@ -160,7 +160,7 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
               </div>
 
               <p className="mt-4 font-mono text-[11px] text-white/40">
-                Instalador ~185 MB · v1.1.0 estable · Sin anuncios
+                Instalador ~185 MB · v{VERSION} estable · Sin anuncios
               </p>
             </div>
 

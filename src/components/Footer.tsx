@@ -1,6 +1,10 @@
 import { Disc, AtSign, Rss } from "lucide-react";
 import Logo from "@/components/Logo";
 import Reveal from "@/components/Reveal";
+import { VERSION } from "@/lib/download";
+
+const RELEASES_URL =
+  "https://github.com/diegocarrillo8192-jpg/smart-set-studio/releases/latest";
 
 const columns = [
   {
@@ -9,7 +13,7 @@ const columns = [
       { label: "Features", href: "#features" },
       { label: "Demo en vivo", href: "https://smart-set-studio-e6cf.vercel.app" },
       { label: "Descarga", href: "#download" },
-      { label: "Notas de versión", href: "#" },
+      { label: "Notas de versión", href: RELEASES_URL },
     ],
   },
   {
@@ -24,9 +28,9 @@ const columns = [
   {
     title: "Legal",
     links: [
-      { label: "Privacidad", href: "#" },
-      { label: "Términos", href: "#" },
-      { label: "Licencia", href: "#" },
+      { label: "Política de Privacidad", href: "/privacy" },
+      { label: "Términos y Condiciones", href: "/terms" },
+      { label: "Licencia", href: "/terms" },
     ],
   },
 ];
@@ -91,7 +95,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Smart Set Architect. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 font-mono text-[11px] text-white/35">
-              <span>v1.1.0</span>
+              <span>v{VERSION}</span>
               <span className="size-1 rounded-full bg-white/20" />
               <span>Diseñado para DJs</span>
             </div>

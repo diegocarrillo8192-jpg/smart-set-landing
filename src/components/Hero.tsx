@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { EASE } from "@/lib/motion";
 import { fireDownloadConfetti } from "@/lib/confetti";
-import { WINDOWS_URL, MACOS_URL } from "@/lib/download";
+import { WINDOWS_URL, MACOS_URL, VERSION } from "@/lib/download";
 import Spotlight from "@/components/effects/Spotlight";
 import GlowButton from "@/components/effects/GlowButton";
 import BorderBeam from "@/components/effects/BorderBeam";
@@ -94,7 +94,7 @@ export default function Hero() {
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2.5 rounded-full border border-cyan-300/20 bg-cyan-400/[0.06] px-4 py-1.5 text-xs font-medium tracking-wide text-neon backdrop-blur">
               <span className="animate-pulse-dot size-1.5 rounded-full bg-neon shadow-[0_0_10px_2px_rgba(34,211,238,0.6)]" />
-              Motor Pro Audio · Windows y macOS · v1.1
+              Motor Pro Audio · Windows y macOS · v{VERSION}
             </span>
           </motion.div>
 
