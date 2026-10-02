@@ -2,16 +2,22 @@
 
 import { useRef, useState, type MouseEvent } from "react";
 import { motion } from "framer-motion";
-import { BrainCircuit, Timer, FileOutput, ScanLine, type LucideIcon } from "lucide-react";
+import {
+  Gauge,
+  Link2,
+  Repeat2,
+  LayoutGrid,
+  type LucideIcon,
+} from "lucide-react";
 import { fadeUp } from "@/lib/motion";
 import { cn } from "@/lib/cn";
 import BorderBeam from "@/components/effects/BorderBeam";
 
 const icons: Record<string, LucideIcon> = {
-  brain: BrainCircuit,
-  timer: Timer,
-  export: FileOutput,
-  scan: ScanLine,
+  gauge: Gauge,
+  sync: Link2,
+  loop: Repeat2,
+  layout: LayoutGrid,
 };
 
 type FeatureCardProps = {

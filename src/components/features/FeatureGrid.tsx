@@ -11,32 +11,32 @@ type FeatureGridProps = {
 
 const features = [
   {
-    iconName: "brain" as const,
-    title: "Algoritmo de Transición Armónica",
+    iconName: "gauge" as const,
+    title: "Hard Phase Lock a 0 ms",
     description:
-      "Cada mezcla se construye con la coherencia de la rueda Camelot, garantizando transiciones armónicas en toda tu sesión.",
-    tags: ["Rueda Camelot", "Tonalidades compatibles"],
+      "El Motor Pro Audio bloquea la fase de cada pista con 0 ms de jitter: sincronización estática sin deriva, incluso en sesiones de horas.",
+    tags: ["0 ms jitter", "Sync estático"],
   },
   {
-    iconName: "timer" as const,
-    title: "Estructuración por Duración y Peak Hours",
+    iconName: "sync" as const,
+    title: "Sincronización 1:1 de precisión",
     description:
-      "Secuencia tus tracks según la duración del set y la energía de cada momento, construyendo picos de forma intencional.",
-    tags: ["Curvas de energía", "Picos programados"],
+      "Grilla, BPM y posición de beat replicados con exactitud 1:1, al nivel de los estándares de la industria como Rekordbox y Traktor.",
+    tags: ["Hard Lock 1:1", "Rekordbox · Traktor"],
   },
   {
-    iconName: "export" as const,
-    title: "Exportación XML Nativa",
+    iconName: "loop" as const,
+    title: "Auto Loops & Beat Jump cuantizados",
     description:
-      "De Smart Set Architect a tus reproductores en un clic: playlists y estructura exportadas a los formatos nativos de cada software.",
+      "Loops automáticos y saltos de beat cuantizados a la grilla para transiciones limpias y ediciones en vivo sin un solo error de timing.",
+    tags: ["Auto Loops", "Beat Jump"],
+  },
+  {
+    iconName: "layout" as const,
+    title: "Maquetado inteligente de sets",
+    description:
+      "Análisis armónico y curvas de energía que estructuran tu set completo, con exportación nativa a Rekordbox y Serato en un clic.",
     tags: ["Rekordbox XML", "Serato Crates"],
-  },
-  {
-    iconName: "scan" as const,
-    title: "Escaneo Local de Alta Velocidad",
-    description:
-      "Miles de pistas analizadas en segundos: BPM, clave y energía detectados de forma 100 % local, sin subir nada a la nube.",
-    tags: ["BPM · Key", "100 % local"],
   },
 ];
 
@@ -44,14 +44,15 @@ export default function FeatureGrid({ id }: FeatureGridProps) {
   return (
     <section id={id} className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[380px] w-[640px] -translate-x-1/2 rounded-full bg-violet-600/[0.07] blur-[130px]" />
+        <div className="absolute left-1/2 top-0 h-[380px] w-[640px] -translate-x-1/2 rounded-full bg-violet-600/[0.08] blur-[130px]" />
+        <div className="absolute right-[8%] bottom-0 h-[300px] w-[480px] rounded-full bg-cyan-500/[0.06] blur-[130px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeader
-          eyebrow="Features pro"
-          title="Todo lo que el análisis de tu biblioteca necesita"
-          subtitle="Un motor pensado para DJs que exigen precisión en cada transición, sin renunciar a la velocidad."
+          eyebrow="Motor Pro Audio"
+          title="Ingeniería de precisión para tu set"
+          subtitle="Fase bloqueada, grilla exacta y loops cuantizados: el motor detrás de sets que suenan perfectos de principio a fin."
         />
 
         <motion.div

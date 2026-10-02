@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Smart Set Architect — La inteligencia que transforma tu biblioteca en sets perfectos",
   description:
-    "Análisis armónico, curvas de energía e integración nativa con Rekordbox y Serato. Descarga Smart Set Architect para Windows.",
+    "Motor Pro Audio con Hard Phase Lock a 0 ms, sincronización 1:1, Auto Loops cuantizados a la grilla y maquetado inteligente de sets para Rekordbox y Serato.",
   keywords: ["DJ", "Rekordbox", "Serato", "mixing armónico", "rueda Camelot", "software DJ"],
   openGraph: {
     title: "Smart Set Architect — Inteligencia para DJs",
     description:
-      "Análisis armónico, curvas de energía e integración nativa con Rekordbox y Serato.",
+      "Motor Pro Audio con Hard Phase Lock a 0 ms, sincronización 1:1, Auto Loops cuantizados y maquetado inteligente de sets.",
     type: "website",
     url: "https://smart-set-landing.vercel.app",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Smart Set Architect — Inteligencia para DJs",
     description:
-      "Análisis armónico, curvas de energía e integración nativa con Rekordbox y Serato.",
+      "Motor Pro Audio con Hard Phase Lock a 0 ms, sincronización 1:1, Auto Loops cuantizados y maquetado inteligente de sets.",
     images: ["https://smart-set-landing.vercel.app/logo.png"],
   },
 };
