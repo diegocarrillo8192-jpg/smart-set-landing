@@ -99,6 +99,8 @@ export default function Header() {
                       key={href}
                       role="menuitem"
                       href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => setDownloadOpen(false)}
                       className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/80 transition-colors duration-200 hover:bg-white/5 hover:text-white"
                     >
@@ -148,6 +150,8 @@ export default function Header() {
                 <a
                   key={href}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                   className="btn-shine mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-[#0b0f17] [--shine:rgba(103,232,249,0.55)]"
                 >

@@ -118,6 +118,8 @@ export default function Hero() {
           <motion.div variants={item} className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
             <GlowButton
               href={WINDOWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={fireDownloadConfetti}
               innerClassName="btn-shine gap-2.5 bg-white px-7 py-3.5 text-[15px] font-medium text-[#0b0f17] shadow-[0_0_40px_-10px_rgba(103,232,249,0.55)] hover:bg-white/90 hover:shadow-[0_0_56px_-8px_rgba(103,232,249,0.7)] [--shine:rgba(103,232,249,0.55)]"
             >
@@ -126,6 +128,8 @@ export default function Hero() {
             </GlowButton>
             <GlowButton
               href={MACOS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={fireDownloadConfetti}
               innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/5 px-7 py-3.5 text-[15px] font-medium text-white/85 backdrop-blur transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
             >

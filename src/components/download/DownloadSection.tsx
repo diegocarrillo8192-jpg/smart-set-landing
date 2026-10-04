@@ -134,6 +134,8 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <GlowButton
                   href={WINDOWS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={fireDownloadConfetti}
                   className="rounded-xl [--glow-duration:3.5s]"
                   innerClassName="btn-shine gap-2.5 bg-[#0d1119] px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_0_50px_-12px_rgba(139,92,246,0.6)] hover:shadow-[0_0_64px_-10px_rgba(139,92,246,0.8)]"
@@ -143,6 +145,8 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
                 </GlowButton>
                 <GlowButton
                   href={MACOS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={fireDownloadConfetti}
                   className="rounded-xl [--glow-duration:3.5s]"
                   innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/[0.04] px-7 py-3.5 text-[15px] font-semibold text-white backdrop-blur transition-all duration-300 hover:border-cyan-300/40 hover:bg-white/10"

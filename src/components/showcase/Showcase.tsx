@@ -92,7 +92,7 @@ export default function Showcase({ id }: ShowcaseProps) {
                         Smart Set Architect — Análisis
                       </span>
                       <span className="font-mono text-[9px] uppercase tracking-widest text-white/35">
-                        v1.1
+                        v1.1.5
                       </span>
                     </div>
 
