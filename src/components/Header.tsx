@@ -15,7 +15,7 @@ const navLinks = [
 
 const downloadOptions = [
   { label: "Descargar para Windows (.exe)", icon: MonitorDown, href: WINDOWS_URL },
-  { label: "Descargar para macOS (.dmg)", icon: Apple, href: MACOS_URL },
+  { label: "Descargar para macOS (.zip)", icon: Apple, href: MACOS_URL },
 ];
 
 export default function Header() {

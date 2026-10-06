@@ -47,7 +47,7 @@ const metrics: Array<{ icon: LucideIcon; label: string }> = [
 const preview = {
   src: "/smart-set-a.png",
   width: 1919,
-  height: 1032,
+  height: 1079,
   alt: "Vista previa de la Biblioteca General de Smart Set Architect",
 };
 
@@ -111,7 +111,7 @@ export default function Hero() {
             className="mt-6 max-w-3xl text-lg leading-relaxed text-soft text-balance sm:text-xl"
           >
             Motor Pro Audio con Hard Phase Lock a 0 ms, sincronización 1:1 de
-            precisión, Auto Loops cuantizados a la grilla y maquetado
+            precisión, Auto Loops cuantizados a la rejilla rítmica y maquetado
             inteligente de sets.
           </motion.p>
 
@@ -134,7 +134,7 @@ export default function Hero() {
               innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/5 px-7 py-3.5 text-[15px] font-medium text-white/85 backdrop-blur transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white"
             >
               <Apple className="size-4.5 text-white/70 transition-transform duration-300 group-hover:translate-y-0.5" />
-              Descargar para macOS (.dmg)
+              Descargar para macOS (.zip)
             </GlowButton>
             <a
               href="https://smart-set-studio-e6cf.vercel.app"

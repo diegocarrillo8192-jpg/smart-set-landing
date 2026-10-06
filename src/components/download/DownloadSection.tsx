@@ -152,7 +152,7 @@ export default function DownloadSection({ id }: DownloadSectionProps) {
                   innerClassName="btn-shine gap-2.5 border border-white/15 bg-white/[0.04] px-7 py-3.5 text-[15px] font-semibold text-white backdrop-blur transition-all duration-300 hover:border-cyan-300/40 hover:bg-white/10"
                 >
                   <Apple className="size-4.5 transition-transform duration-300 group-hover:translate-y-0.5" />
-                  Descargar para macOS (.dmg)
+                  Descargar para macOS (.zip)
                 </GlowButton>
                 <a
                   href="#download"

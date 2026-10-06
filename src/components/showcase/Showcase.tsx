@@ -46,8 +46,8 @@ const details: Array<{
 
 const screenshot = {
   src: "/smart-set-b.png",
-  width: 1916,
-  height: 1024,
+  width: 1919,
+  height: 1079,
   alt: "Análisis de biblioteca, ondas e interfaz de decks de Smart Set Architect",
 };
 
